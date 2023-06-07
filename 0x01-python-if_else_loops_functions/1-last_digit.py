@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-absolute_last_digit = number % 10
+# convert number to absolute number to get correct output
+absolute_last_digit = abs(number) % 10
+# changing print out format if negative / positive
 if number < 0:
-    last_digit = -absolute_last_digit
+    output = "Last digit of {} is -{} and is {}"
 else:
-    last_digit = absolute_last_digit
-output = "Last digit of {} is {} and is {}"
-
+    output = "Last digit of {} is {} and is {}"
+# properly formating output
 if absolute_last_digit > 5:
-    print(output.format(number, last_digit, "greater than 5"))
+    print(output.format(number, absolute_last_digit, "greater than 5"))
 elif absolute_last_digit == 0:
-    print(output.format(number, last_digit, 0))
-elif (absolute_last_digit >= 0) and (absolute_last_digit < 6):
-    print(output.format(number, last_digit, "less than 6 and not 0"))
+    print(output.format(number, absolute_last_digit, 0))
+elif (absolute_last_digit > 0) and (absolute_last_digit < 6):
+    print(output.format(number, absolute_last_digit, "less than 6 and not 0"))
