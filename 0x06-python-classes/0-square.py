@@ -2,6 +2,7 @@
 """
 empty class create
 """
+
+
 class Square:
-    def square():
         pass
