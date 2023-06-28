@@ -56,9 +56,9 @@ class Square:
         """
         square printer
         """
-    if _Square__size == 0:
+        if self._Square__size == 0:
             print()
         for a in range(self._Square__size):
-            for a in range(self._Square__size):
+            for b in range(self._Square__size):
                 print("#", end='')
-		print()
+            print()
