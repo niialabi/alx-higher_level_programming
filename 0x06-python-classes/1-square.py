@@ -14,6 +14,6 @@ class Square:
     """
     def __init__(self, size=0):
         """
-        privage obj(size) of square class 
+        privage obj(size) of square class
         """
         self._Square__size = size
