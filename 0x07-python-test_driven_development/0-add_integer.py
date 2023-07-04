@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" Module to add 2 ints/floats """
 
 def add_integer(a, b=98):
-    """ Function that adds 2 ints/floats
+    """ 
+    Function that adds 2 ints/floats
     
     Final output will be typeset to an int
 
