@@ -87,7 +87,7 @@ class Rectangle:
     def __str__(self):
         """
         prints rectangle with #
-	Args:
+        Args:
             self: self
         """
         ret_string = ""
