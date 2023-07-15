@@ -6,7 +6,8 @@ Geometry Class
 
 class BaseGeometry:
     """
-    Base Geometry class
+    Empty class
     """
-    def __init__(self, name):
-        self.name = name
+
+
+    pass
