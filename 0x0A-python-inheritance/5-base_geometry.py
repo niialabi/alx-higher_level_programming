@@ -5,4 +5,3 @@ Geometry Class
 
 
 class BaseGeometry:
-    pass
