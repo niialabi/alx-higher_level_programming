@@ -2,8 +2,9 @@
 """
 Rectangle module
 """
-"""Base = __import__("base").Base"""
+
 from models.base import Base
+
 
 class Rectangle(Base):
     """
@@ -40,7 +41,7 @@ class Rectangle(Base):
         """
         self.value_check("width", width)
         self.__width = width
-    
+
     @property
     def height(self):
         """
@@ -86,8 +87,6 @@ class Rectangle(Base):
         self.value_check("y", y)
         self.__y = y
 
-
-
     def value_check(self, name, value):
         """
         Checks the value for atributes
@@ -107,3 +106,9 @@ class Rectangle(Base):
             raise ValueError(name + " must be > 0")
         if (name == "y" or name == "x") and value < 0:
             raise ValueError(name + " must be >= 0")
+
+    def area(self):
+        """
+        Area method for Rectangle class
+        """
+        return self.__width * self.__height
