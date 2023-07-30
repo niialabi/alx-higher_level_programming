@@ -127,9 +127,13 @@ class Rectangle(Base):
             for y in range(self.width):
                 print("#", end="")
             print()
+
     def __str__(self):
         """
         magic mth to output data on instance
         """
-        ret = f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        ret = "[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id,
+            self.x, self.y, self.width, self.height
+            )
         return ret
