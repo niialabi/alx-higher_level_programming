@@ -159,5 +159,11 @@ class Rectangle(Base):
         """
         Method that returns the dictionary representation of a Rectangle
         """
-        diction = {"id": self.id, "width": self.width,  "height": self.height, "x": self.x, "y": self.y}
+        diction = {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+            }
         return diction
