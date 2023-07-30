@@ -5,6 +5,7 @@ Module is base of all other classes in this project
 
 import json
 
+
 class Base:
     """
     Base class for all project classes
