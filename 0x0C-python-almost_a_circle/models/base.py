@@ -3,6 +3,7 @@
 Module is base of all other classes in this project
 """
 
+import json
 
 class Base:
     """
@@ -28,6 +29,6 @@ class Base:
         """
         Method that returns the JSON string representation of
         """
-        if len(list_dictionaries) < 1
+        if len(list_dictionaries) == 0 or list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
