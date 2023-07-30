@@ -140,3 +140,14 @@ class Rectangle(Base):
             self.x, self.y, self.width, self.height
             )
         return ret
+
+    def update(self, *args):
+        """
+        update rectangle attributes
+        """
+        if len(args) > 0:
+            attributes = ["id", "width", "height", "x", "y"]
+            index = 0
+            for element in args:
+                setattr(self, attributes[index], element)
+                index += 1
