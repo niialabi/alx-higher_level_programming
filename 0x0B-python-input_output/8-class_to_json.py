@@ -2,6 +2,8 @@
 """
 Module for func class_to_json
 """
+
+
 def class_to_json(obj):
     """
     Function return dictionary description of obj
