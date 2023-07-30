@@ -13,7 +13,14 @@ def pascal_triangle(n):
     """
     if n < 1:
         return []
+ 
+    triangle = [[1]]
+    while len(triangle) < n:
+        prev_row = triangle[-1]
+        new_row = [1]
+        for i in range(1, len(prev_row)):
+            new_row.append(prev_row[i - 1] + prev_row[i])
+        new_row.append(1)
+        triangle.append(new_row)
 
-    for i in range(n):
-        print(" "*(n-i), end="")
-        print(" ".join(map(str, str(11**i))))
+    return triangle
