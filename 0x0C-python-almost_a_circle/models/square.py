@@ -27,3 +27,19 @@ class Square(Rectangle):
                 type(self).__name__, self.id, self.x, self.y,
                 self.width)
         return line
+
+    @property
+    def size(self):
+        """
+        Getter for size of quare
+        """
+        return self.width
+
+    @size.setter
+    def size(self, size):
+        """
+        Setter for size attr
+        """
+        self.value_check("width", size)
+        self.width = size
+        self.height = size
