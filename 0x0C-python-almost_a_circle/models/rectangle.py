@@ -141,7 +141,7 @@ class Rectangle(Base):
             )
         return ret
 
-    def update(self, *args):
+    def update(self, *args, **kwargs)
         """
         update rectangle attributes
         """
@@ -151,3 +151,6 @@ class Rectangle(Base):
             for element in args:
                 setattr(self, attributes[index], element)
                 index += 1
+        elif len(kwargs) > 0:
+            for elements in kwargs:
+                setattr(self, elements, kwargs[element])
