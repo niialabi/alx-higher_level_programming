@@ -2,6 +2,8 @@
 """
 module containing locked class
 """
+
+
 class LockedClass:
     """
     lockedclass class
@@ -11,4 +13,5 @@ class LockedClass:
             # Allow creating the 'first_name' attribute
             self.__dict__[name] = value
         else:
-            raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+            raise AttributeError(f"'{type(self).__name__}'
+                                 object has no attribute '{name}'")
