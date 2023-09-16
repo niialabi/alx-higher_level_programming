@@ -17,13 +17,15 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        
+
     @property
     def width(self):
         return self.__width
-    
+
     @width.setter
     def width(self, width):
+        """setter for width"""
+        self.valid_attribute(width, "width")
         self.__width = width
 
     @property
@@ -32,6 +34,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        """setter for height"""
+        self.valid_attribute(height, "height")
         self.__height = height
 
     @property
@@ -40,6 +44,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        """setter for x"""
+        self.valid_attribute(x, "x")
         self.__x = x
 
     @property
@@ -48,4 +54,16 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
+        """setter for y"""
+        self.valid_attribute(y, "y")
         self.__y = y
+
+    def valid_attribute(self, value, value_name):
+        if not isinstance(value, int):
+            raise TypeError(value_name + " must be an integer")
+        if value_name == "width" or value_name == "height":
+            if value < 1:
+                raise ValueError(value_name + " must be > 0")
+        if value_name == "x" or value_name == "y":
+            if value < 0:
+                raise ValueError(value_name + " must be >= 0")
