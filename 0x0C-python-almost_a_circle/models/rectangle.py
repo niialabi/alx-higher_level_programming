@@ -72,8 +72,8 @@ class Rectangle(Base):
         return (self.width * self.height)
 
     def display(self):
-        for i in range (self.height):
-            for x in range (self.width):
+        for i in range(self.height):
+            for x in range(self.width):
                 if x == (self.width - 1):
                     print("#")
                 else:
