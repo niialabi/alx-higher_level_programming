@@ -70,3 +70,11 @@ class Rectangle(Base):
 
     def area(self):
         return (self.width * self.height)
+
+    def display(self):
+        for i in range (self.height):
+            for x in range (self.width):
+                if x == (self.width - 1):
+                    print("#")
+                else:
+                    print("#", end="")
