@@ -69,12 +69,23 @@ class Rectangle(Base):
                 raise ValueError(value_name + " must be >= 0")
 
     def area(self):
+        """
+        function that conputes area of rectangle
+        """
         return (self.width * self.height)
 
     def display(self):
+        """function that displays rectangle as #"""
         for i in range(self.height):
             for x in range(self.width):
                 if x == (self.width - 1):
                     print("#")
                 else:
                     print("#", end="")
+
+    """def __str__(self):
+        return ("[" + type(self).__name__ + "] " +
+                str(self.__width) + "/" + str(self.__height))
+    """
+    def __str__(self):
+        return(f"[{type(self).__name__}]({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
