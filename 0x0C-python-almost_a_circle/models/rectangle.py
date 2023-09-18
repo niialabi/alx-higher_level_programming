@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module containing Rectangle Class"""
+"""
+Module containing Rectangle Class
+"""
 
 from models.base import Base
 import json
@@ -46,29 +48,39 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        """setter for height"""
+        """
+        setter for height
+        """
         self.valid_attribute(height, "height")
         self.__height = height
 
     @property
     def x(self):
-        """getter for x"""
+        """
+        getter for x
+        """
         return self.__x
 
     @x.setter
     def x(self, x):
-        """setter for x"""
+        """
+        setter for x
+        """
         self.valid_attribute(x, "x")
         self.__x = x
 
     @property
     def y(self):
-        """getter for y"""
+        """
+        getter for y
+        """
         return self.__y
 
     @y.setter
     def y(self, y):
-        """setter for y"""
+        """
+        setter for y
+        """
         self.valid_attribute(y, "y")
         self.__y = y
 
@@ -93,7 +105,9 @@ class Rectangle(Base):
         return (self.width * self.height)
 
     def display(self):
-        """function that displays rectangle as #"""
+        """
+        function that displays rectangle as #
+        """
         for i in range(self.y):
             print()
         for i in range(self.height):
