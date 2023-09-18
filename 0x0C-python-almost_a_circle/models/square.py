@@ -34,6 +34,7 @@ class Square(Rectangle):
         self.height = size
 
     def __str__(self):
+        """returns formated rep of object"""
         return(f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.width}")
 
     def update(self, *args, **kwargs):

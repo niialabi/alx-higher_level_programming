@@ -12,6 +12,11 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Constructor
+        Args:
+            width: width
+            height: height
+            x: optional x-axis
+            y: optional y-axis
         """
         super().__init__(id)
         self.width = width
@@ -21,6 +26,9 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """
+        getter for with of rectangle value
+        """
         return self.__width
 
     @width.setter
@@ -31,6 +39,9 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """
+        getter for rect. height val
+        """
         return self.__height
 
     @height.setter
@@ -41,6 +52,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """getter for x"""
         return self.__x
 
     @x.setter
@@ -51,6 +63,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """getter for y"""
         return self.__y
 
     @y.setter
@@ -60,6 +73,10 @@ class Rectangle(Base):
         self.__y = y
 
     def valid_attribute(self, value, value_name):
+        """
+        value: val to be set
+        value_name: dfdi
+        """
         if not isinstance(value, int):
             raise TypeError(value_name + " must be an integer")
         if value_name == "width" or value_name == "height":
@@ -92,8 +109,10 @@ class Rectangle(Base):
         return ("[" + type(self).__name__ + "] " +
                 str(self.__width) + "/" + str(self.__height))
     """
+
     def __str__(self):
-        return(f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
+        return (f"[{type(self).__name__}] ({self.id}) "
+                f"{self.x}/{self.y} - {self.width}/{self.height}")
 
     def update(self, *args, **kwargs):
         if args:
