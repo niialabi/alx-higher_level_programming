@@ -111,10 +111,16 @@ class Rectangle(Base):
     """
 
     def __str__(self):
+        """
+        returns str rep of object
+        """
         return (f"[{type(self).__name__}] ({self.id}) "
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
 
     def update(self, *args, **kwargs):
+        """
+        updates objec mutiple arguments
+        """
         if args:
             for i, arg in enumerate(args):
                 if i == 0:
@@ -142,6 +148,9 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """
+        returns string rep of obj
+        """
         dict = {
             "id": self.id,
             "width": self.width,
