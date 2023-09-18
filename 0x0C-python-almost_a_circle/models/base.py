@@ -34,6 +34,6 @@ class Base:
         obj_list = []
         if list_objs:
             for obj in list_objs:
-                obj_list.append(cls.to_dictionary(obj))
+                obj_list.append(obj.to_dictionary())
         with open(f"{cls.__name__}.json", "w") as f:
             f.write(Base.to_json_string(obj_list if obj_list else []))
