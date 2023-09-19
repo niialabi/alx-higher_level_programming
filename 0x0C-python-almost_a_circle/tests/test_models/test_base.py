@@ -1,5 +1,9 @@
+#!/usr/bin/python3
+"""
+unit test Base class
+"""
 import unittest
-from models.base import Base
+import models.base.Base import Base
 
 class TestBase(unittest.TestCase):
 
