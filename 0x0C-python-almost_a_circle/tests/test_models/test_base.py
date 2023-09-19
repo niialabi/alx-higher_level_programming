@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-unit test Base class
+unit test Base classsssss
 """
 import unittest
-import models.base.Base import Base
+import models.base as b
+Base = b.Base
 
 class TestBase(unittest.TestCase):
 
