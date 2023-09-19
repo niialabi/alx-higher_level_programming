@@ -47,6 +47,7 @@ class Base:
         with open(f"{cls.__name__}.json", "w") as f:
             f.write(Base.to_json_string(obj_list if obj_list else []))
 
+    @staticmethod
     def from_json_string(json_string):
         """
         returns the list of the JSON string representation 
