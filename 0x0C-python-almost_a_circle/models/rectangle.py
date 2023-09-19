@@ -33,7 +33,9 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
-        """setter for width"""
+        """
+        setter for width
+        """
         self.valid_attribute(width, "width")
         self.__width = width
 
