@@ -46,3 +46,11 @@ class Base:
                 obj_list.append(obj.to_dictionary())
         with open(f"{cls.__name__}.json", "w") as f:
             f.write(Base.to_json_string(obj_list if obj_list else []))
+
+    def from_json_string(json_string):
+        """
+        returns the list of the JSON string representation 
+        """
+        if json_string == "" or json_string is None:
+            return[]
+        return json.loads(json_string)
