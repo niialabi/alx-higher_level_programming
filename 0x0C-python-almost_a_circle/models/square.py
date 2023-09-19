@@ -3,7 +3,7 @@
 module contains square class
 """
 
-from .rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -38,6 +38,12 @@ class Square(Rectangle):
         return(f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.width}")
 
     def update(self, *args, **kwargs):
+        """
+        Update square args
+        Args:
+            args if args are used in order
+            kwargs is kwargs are used key:value
+        """
         if args:
             for i, arg in enumerate(args):
                 if i == 0:
@@ -61,6 +67,9 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
+        """
+        Convert obj member to script
+        """
         dict = {
             "id": self.id,
             "size": self.size,

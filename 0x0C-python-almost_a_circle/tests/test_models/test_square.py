@@ -1,5 +1,6 @@
 import unittest
 from models.square import Square
+from models.base import Base
 
 class TestSquare(unittest.TestCase):
 
@@ -44,3 +45,4 @@ class TestSquare(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
