@@ -67,5 +67,5 @@ class Base:
             allatt = cls(1, 1)
         else:
             allatt = cls(1)
-        cls.update(allatt, **dictionary)
+        cls.update(allatt, dictionary)
         return allatt
