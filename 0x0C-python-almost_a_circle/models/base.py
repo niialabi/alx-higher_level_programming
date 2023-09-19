@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module containing Base Class"""
+"""
+Module containing Base Class
+"""
 
 import json
 
@@ -14,6 +16,8 @@ class Base:
     def __init__(self, id=None):
         """
         Constructor for base class
+        Args:
+            id(optional): self selected id
         """
         if id is not None:
             self.id = id
@@ -22,6 +26,11 @@ class Base:
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
+        """
+        converts list of dictionaries
+        Args:
+            list_dictionaries: dict list
+        """
         if len(list_dictionaries) == 0 or list_dictionaries is None:
             return ("[]")
         return(json.dumps(list_dictionaries))
