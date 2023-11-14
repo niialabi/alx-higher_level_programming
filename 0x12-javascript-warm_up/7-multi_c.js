@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const { argv } = require('process');
-if (argv.length < 3) {
+if (argv.length < 3 || isNaN(argv[2])) {
   console.log('Missing number of occurrences')
 } else if (Number.parseInt(argv[2], 10) < 0) {
 
