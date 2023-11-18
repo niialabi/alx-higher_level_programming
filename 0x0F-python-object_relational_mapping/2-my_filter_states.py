@@ -14,7 +14,8 @@ if __name__ == "__main__":
         )
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name = '{0}' ORDER BY id".format(argv[4]))
+    cur.execute("SELECT * FROM states WHERE name = '{0}' ORDER BY id".format(
+        argv[4]))
     result = cur.fetchall()
     for row in result:
         print(row)
