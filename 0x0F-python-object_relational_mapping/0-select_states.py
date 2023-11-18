@@ -4,7 +4,6 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    db = argv[3]
     db = MySQLdb.connect(
         host="localhost",
         user=argv[1],
