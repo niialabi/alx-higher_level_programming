@@ -25,7 +25,7 @@ if __name__ == "__main__":
     for cit in res:
         for ci in cit:
             i += 1
-            if i == 3:
+            if i == len(res):
                 print(ci)
             else:
                 print(ci, end=", ")
