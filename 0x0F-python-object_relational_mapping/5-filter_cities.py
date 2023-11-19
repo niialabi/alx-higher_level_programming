@@ -21,6 +21,11 @@ if __name__ == "__main__":
         (SELECT id FROM states WHERE name = %s) ORDER BY cities.id ASC"
     cur.execute(query, (user_input, ))
     res = cur.fetchall()
+    output_tup = ()
+    for row in res:
+        output_tup += row
+    print(*output_tup, sep=", ")
+    """
     i = 0
     for cit in res:
         for ci in cit:
@@ -29,5 +34,6 @@ if __name__ == "__main__":
                 print(ci)
             else:
                 print(ci, end=", ")
+    """
     cur.close()
     db.close()
