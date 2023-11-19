@@ -12,9 +12,11 @@ if __name__ == "__main__":
         db=argv[3],
         port=3306
         )
+    # create object instance
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id".format(
+    # execute query
+    cur.execute("SELECT * FROM states WHERE name = {} ORDER BY id".format(
         argv[4]))
     result = cur.fetchall()
     for row in result:
