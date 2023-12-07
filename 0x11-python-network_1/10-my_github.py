@@ -7,5 +7,5 @@ import requests
 if __name__ == "__main__":
     u_name = argv[1]
     u_token = argv[2]
-    resp = r = requests.get(f'https://api.github.com/users/{u_name}', headers={"Authorization": f'{u_token}'})
+    resp = r = requests.get(f'https://api.github.com/users/{u_name}', headers={"Authorization": f'token {u_token}'})
     print(resp.json().get('id'))
